@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en" ng-app='myApp'>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/shaoCar.css">
+    <link rel="stylesheet" href="./css/swiper.min.css">
+
+    <script src="./js/swiper.min.js"></script>
+    <script src="./js/angular.min.js"></script>
+
+    <script src="js/response.js"></script>
+    <title>购物车</title>
+
+
+
+
+</head>
+
+<body ng-controller="content">
+    <!--头部开始-->
+    <div class="header">
+        <div class="pre fl">
+            <a href="/product">
+                &lt; </a>
+        </div>
+        <h2 class="titleName fl"><em>购物车</em></h2>
+        <div class="pre fr list">
+            <span class="dian">...</span>
+        </div>
+
+    </div>
+    <!--购物车开始-->
+    <div class='buyCar'>
+        <div class='buyBox'>
+            <div class='close_btn'></div>
+            <div class='buyCarList'>
+                <dl class='h_box '>
+                    <dt class='shop_img fl'>
+                    <img src="./images/12000989051136476.jpg" alt="">
+                </dt>
+                    <dd class='fl'>
+                        <div class='buyCarLeft fl'>
+                            <h2>
+                            <em>cool1 Type C数据线CC-002C</em>
+                        </h2>
+                            <p class='buyCol'>
+                                <em>白色</em>
+                            </p>
+                        </div>
+                        <div class='buyCarRight fr'>
+                            <p>¥<em>19.00</em></p>
+                            <div class='numb'>
+                                <span><em>x1</em></span>
+                            </div>
+                        </div>
+                    </dd>
+                </dl>
+            </div>
+        </div>
+        <div class='buyBox' ng-repeat='item in news'>
+            <div class='close_btn' ng-click="removeItem(item.goodsId)"></div>
+            <div class='buyCarList'>
+                <dl class='h_box '>
+                    <dt class='shop_img fl'>
+                    <img ng-src="{{item.img}}" alt="">
+                </dt>
+                    <dd class='fl'>
+                        <div class='buyCarLeft fl'>
+                            <h2>
+                            <em>{{item.name}}</em>
+                        </h2>
+                            <p class='buyCol'>
+                                <em>白色</em>
+                            </p>
+                        </div>
+                        <div class='buyCarRight fr'>
+                            <p>¥<em>{{item.price}}</em></p>
+                            <div class='numb'>
+                                <span><em>x1</em></span>
+                            </div>
+                        </div>
+                    </dd>
+                </dl>
+            </div>
+        </div>
+
+
+
+        <!--    商品拖拽列表-->
+        <div class='addprice_box'>
+            <h3 class='addprice_title'>
+        <img src="./images/1810565676506079.jpg" alt="">
+        <span>请向左滑动查看更多商品</span>
+    </h3>
+            <div class='addprice_list'>
+                <div class="swiper-container" id="slide1">
+
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide page1" ng-repeat='item in data'>
+
+                            <div class='mr24'>
+                                <img ng-src="{{item.img}}" alt="">
+                                <h3 class='shop_titles'>
+                         <em class="font28 dark1" ng-bind="item.name"></em>
+                     </h3>
+
+                                <p class='prices'>
+                                    <em class="red">
+                           <em class="font20">¥
+                           </em>
+                                    <em class="font32" ng-bind="item.price"></em>
+                                    </em>
+                                </p>
+                                <p class='add_shop_car' ng-click="set(item.goodsId,true)">
+                                    <em>加入购物车</em>
+                                </p>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <!--底部结算-->
+    <div class='buy_box '>
+        <dl class='buy_boxs'>
+            <dt class='flex_1 fl'>
+           <div class='rights fr'>
+               <p class='pr20'><em class="font22 gray72">商品总额(不含运费)</em></p>
+               <p class='pt14'>
+                   <em class="font28">¥</em>
+                   <em id="sumPrice" class="font36">{{totalPrice+19}}</em>
+               </p>
+           </div>
+       </dt>
+            <dd class='jiesuan fr'>
+                <span>
+               <em class="font28 white">去结算({{news.length+1}})</em>
+           </span>
+            </dd>
+        </dl>
+    </div>
+
+
+
+
+
+
+
+
+    <script src='js/jquery-1.11.1.min.js'></script>
+
+
+    <script src='./js/faskclick.js'></script>
+    <script>
+        var app = angular.module("myApp", []);
+        var olds = [{
+            "img": "./images/6920517587283777.jpg",
+            "name": "乐视超级移动电源 13400mAh",
+            "price": 109.00,
+            'goodsId': '1'
+		}, {
+            "img": "./images/3616552663243141.jpg",
+            "name": "乐视反戴式耳机",
+            "price": 39.00,
+            'goodsId': '2'
+		}, {
+            "img": "./images/10782477825581727.jpg",
+            "name": "酷派cool1半入耳式耳机C86-C1",
+            "price": 39.00,
+            'goodsId': '3'
+		}, {
+            "img": "./images/12533067061982850.jpg",
+            "name": "乐视蓝牙自拍杆 黑色",
+            "price": 69,
+            'goodsId': '4'
+		}, {
+            "img": "./images/10783372122444177.jpg",
+            "name": "cool  1手机超薄钢化膜",
+            "price": 22.00,
+            'goodsId': '5'
+		}, {
+            "img": "./images/1309676281908650.jpg",
+            "name": "酷派 Type-C双向移动电源 10000mAh 白色",
+            "price": 86.00,
+            'goodsId': '6'
+		}, {
+            "img": "./images/1309676281908650.jpg",
+            "name": "酷派 Type-C双向移动电源 10000mAh 白色",
+            "price": 86.00,
+            'goodsId': '6'
+		}];
+        //      console.log(olds);
+        app.controller("content", function ($scope) {
+            $scope.data = olds;
+            //    console.log($scope.data);
+            //    console.log(1);
+            $scope.news = [];
+
+            angular.forEach($scope.data, function (item) {
+                item.num = 0;
+                console.log($scope.data);
+            });
+            $scope.set = function (goodsId, select) {
+                // 1.循环判断当前数据
+                angular.forEach($scope.data, function (item, index) {
+                    // 2.传参
+                    if (goodsId == item.goodsId) {
+
+                        $scope.news.push(item);
+                        $scope.data.splice(index, 1);
+                        // 如果,用户在点击新的商品
+
+
+                    }
+                })
+            };
+            $scope.removeItem = function (goodsId) {
+
+                angular.forEach($scope.news, function (item, index) {
+                    if (goodsId == item.goodsId) {
+                        $scope.news.splice(index, 1);
+                        item.num = 0;
+                    }
+                    // if(item.num<=0)$scope.cart.splice(index,1);
+                    // 这个里面用的就是cart的索引才是正确的索引
+                })
+            };
+            $scope.$watch('news', function () {
+                $scope.totalNum = 0; //商品数量
+                $scope.totalPrice = 0;
+                // 注意监听cart的写法
+                angular.forEach($scope.news, function (item, index) {
+                    //					if(item.num<=0)$scope.cart.splice(index,1);
+                    // console.log(item.num)
+                    //					$scope.totalNum+=item.num;
+                    $scope.totalPrice += item.price;
+                    // 这个里面用的就是cart的索引才是正确的索引
+                })
+            }, true);
+            $scope.$watch('data', function () {
+                if ($scope.data.length == 0) {
+                    alert('没有更多商品了请去逛逛吧');
+                }
+            }, true);
+
+
+        });
+
+
+
+        window.onload = function () {
+            var mySwiper1 = new Swiper('#slide1', {
+                slidesPerView: 2,
+                //           loop:true,
+                //            spaceBetween : 20,
+                //            freeMode : true,
+            });
+            
+            $(function () {  
+                  
+                $(".add_shop_car").click(function (event) { 
+                    var offset = $(".add_shop_car>em").offset(); 
+                    var add_shop_car = $(this);  
+                    var img = add_shop_car.parent().parent().find('img').attr('src');  
+                    
+                    var flyer = $('<img class="u-flyer" src="' + img + '">');  
+                    console.log(flyer);
+                    var startLeft=event.pageX;
+                    var startTop=event.pageY;
+                    console.log(startTop+',,,,'+startLeft);
+                    var endL=offset.left;
+                    var endT=offset.top;
+                    console.log(endT+'...'+endL);
+
+                    flyer.css({left:startLeft,top:startTop});
+                    $('body').append(flyer);
+                    // console.log(typeof flyer);
+                    flyer.animate({left:endL,top:endT},500,function(){
+                        $(this).remove();
+                    });
+
+                });  
+      
+            });  
+
+        }
+    </script>
+    <script>
+        // 优化点击事件
+        // FastClick.attach(document.body);
+    </script>
+
+
+
+
+
+
+
+
+</body>
+
+</html>

@@ -1,0 +1,144 @@
+@charset "utf-8";
+$fontSize:100;
+
+@function r($px){
+	@return $px/2/$fontSize+rem;
+}
+
+
+@mixin setPm($name,$val...){
+	// ...是固定写法,在值不固定的时候
+	//$val 往后所有的值
+	$max:length($val);//4
+	$str:'';
+
+
+	// 进行值得计算
+// 12 34 57 78
+	@for $i from 1 through $max{
+	$value:nth($val,$i)/2/$fontSize;
+	
+	$str:#{$str+$value}rem;
+	
+	@if $i<$max{
+		$str:#{$str+" "};
+	}
+
+	}
+	#{$name}:$str;
+}
+#wraper{
+    width:100%;
+    font-family: "PingHei", Microsoft Yahei, SimSun, Arial, Helvetica, sans-serif;
+}
+.top{
+    background:#06C1AE;
+    width:100%;
+    height:r(101);
+    border-bottom: 1px solid #21897d;
+    color:white;
+}
+.pre{
+    width: r(105);
+    font-size:0.4rem;
+    height: 100%;
+    line-height: r(101);
+    text-align: center;
+    float: left;
+    font-family: "PingHei", Microsoft Yahei, SimSun, Arial, Helvetica, sans-serif;
+}
+.meituan{
+    width:r(560);
+    height:100%;
+    float: left;
+     line-height: r(101);
+    text-align: center;
+        font-weight: 400;
+    font-size: 0.2rem;
+    
+}
+.top_right{
+    height:100%;
+    float: left;
+    width:r(80);
+}
+.top_right a{
+    text-align: left;
+    display: inline-block;
+    height: 100%;
+    color: white;
+    width: 100%;
+    
+    font-size: r(24);
+}
+ .nav_btn{
+//    font-size: r(14);
+     display: block;
+    margin-top: r(20);
+}
+.text-icon{
+    display: inline-block;
+border-bottom: 1px solid white;
+    border-top: 1px solid white;
+    border-left: 1px solid white;
+    border-right: 1px solid white;
+    float: left;
+
+}
+.border{
+    width:r(40);
+    float: left;
+    border: 1px solid white;
+    margin-left: r(4);
+    
+}
+.tupiao{
+    width:100%;
+    height:r(14);
+   
+}
+.tu_one{
+     margin-top: r(18);
+}
+.login-box{
+    padding-bottom: r(60);
+    padding-top: r(30);
+    padding-left: r(20);
+    padding-right: r(20);
+}
+.codebox{
+    margin-bottom: r(10);
+    border: 1px solid #CECECE;
+    border-radius: r(6);
+    width:100%;
+}
+.box{
+//     border: none;
+        border-top: 1px solid #CECECE;
+}
+.codebox-input{
+border-top-left-radius: r(6);
+    border-top-right-radius: r(6);
+        display: block;
+    background: none;
+    border: none;
+    padding: r(13) r(10);
+    outline: none;
+    vertical-align: top;
+}
+.j_submit{
+    height: 100%;
+    background: #FF621D;
+    text-align: center;
+    color: #fff;
+    cursor: pointer;
+    overflow: hidden;
+    border: none;
+    border-radius: r(6);
+    padding: .1rem;
+    width: 100%;
+}
+
+
+
+

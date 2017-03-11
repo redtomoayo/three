@@ -1,0 +1,318 @@
+@charset "utf-8";
+$fontSize:20;
+
+@function r($px){
+	@return $px/$fontSize+rem;
+}
+
+
+@mixin setPm($name,$val...){
+	// ...是固定写法,在值不固定的时候
+	//$val 往后所有的值
+	$max:length($val);//4
+	$str:'';
+
+
+	// 进行值得计算
+// 12 34 57 78
+	@for $i from 1 through $max{
+	$value:nth($val,$i)/$fontSize;
+	
+	$str:#{$str+$value}rem;
+	
+	@if $i<$max{
+		$str:#{$str+" "};
+	}
+
+	}
+	#{$name}:$str;
+}
+body{
+   background: #f2f2f2;
+    font-family: "PingHei", Microsoft Yahei, SimSun, Arial, Helvetica, sans-serif;
+}
+.header{
+    width: 100%;
+    height: r(52);
+
+
+}
+.pre{
+;
+    width: r(52);
+    height:r(52);
+    text-align: center;
+    line-height: r(52);
+    font-family: "PingHei", Microsoft Yahei, SimSun, Arial, Helvetica, sans-serif;
+
+}
+.pre a{
+    font-size: r(25);
+          color: #898989;
+   
+}
+
+.list span{
+      color: #898989;
+    font-size: r(7);
+}
+.titleName{
+width: 72%;
+    height: 100%;
+    line-height: r(52);
+    overflow: hidden;
+    text-align: center;
+    
+}
+.titleName em {
+    font-size: r(18);
+    color: #5e5b5b;
+}
+.buyCar{
+    width: 100%;
+    height: auto;
+     padding-bottom: r(118);
+}
+.buyBox{
+    background: #fff;
+    border-top: 1px solid #e9e9e9;
+    border-bottom: 1px solid #e9e9e9;
+    margin-top:r(12);
+    height: auto;
+    position: relative;
+    padding: r(19) r(9) r(19) r(43);
+}
+.close_btn{
+    display: block;
+    width: r(25);
+    height: r(25);
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 0 0 r(12) r(12);
+    background: url(../images/5949441660e349478d13881b711d6d2b.jpg) right top no-repeat;
+    background-size: r(25) auto;
+}
+.buyCarList{
+        height: auto;
+    overflow: hidden;
+    position: relative;
+}
+.h_box{
+    width: 100%;
+}
+.shop_img{
+        width: r(79);
+    height: r(79);
+    border: 1px solid #ddd;
+    position: relative;
+    margin-right: r(7);
+    text-align: center;
+}
+.shop_img img{
+    display: inline-block;
+    width: auto;
+    height: r(79);
+    max-width: r(79);
+}
+.h_box dd{
+   
+    width: r(233);
+    height: r(81);
+}
+.buyCarLeft{
+    width: 70%;
+    float: left;
+    padding-top: r(6);
+    height: r(56);
+    position: relative;
+    padding-bottom: r(16);
+}
+.buyCarLeft h2{
+        overflow: hidden;
+    line-height: r(16);
+    max-height: r(33);
+//    display: -webkit-box;
+    width: 100%;
+}
+.buyCarLeft h2 em{
+    font-size: r(16);
+}
+.buyCol{
+    color: #999;
+    padding-top: r(7);
+    overflow: hidden;
+}
+.buyCol em{
+    font-size: r(12);
+    color: #999;
+}
+.buyCarRight{
+    
+}
+.buyCarRight p{
+       color: #f15353;
+    text-align: right;
+    padding-top: r(6); 
+}
+.buyCarRight p em{
+    font-size: r(14);
+}
+.numb{
+    
+    margin-top:r(34);
+    height: auto;
+    overflow: hidden;
+    border-radius:r(4);
+}
+.numb span{
+    display: block;
+    text-align: right;
+    color: #818080;
+}
+.numb span em{
+    font-size: r(12);
+}
+.addprice_box{
+    margin-top: r(12);
+    width: 100%;
+    height: auto;
+}
+.addprice_title{
+    padding:r(12) r(0) r(12) r(14);
+border-bottom: 1px solid #d3d3d3;
+    background: white;
+}
+.addprice_title img{
+    width: r(26);
+    height: r(25);
+    display: inline-block;
+    vertical-align: middle;
+}
+.addprice_list{
+ padding: r(18) 0;
+   height: r(251);
+    font-size: r(14);
+    background: white;
+}
+#slide1{
+    width: 100%;
+    height: 100%;
+}
+.page1{
+    width: r(146) !important;
+    margin-right: 0 !important;
+}
+.mr24{
+    margin: r(0) r(14.4);
+}
+.mr24 img{
+        height: auto;
+    overflow: hidden;
+        display: block;
+    width: r(117);
+//    height: 9.8em;
+    border: 1px solid #efefef;
+}
+.shop_titles{
+  line-height: r(18);
+    height:r(37);
+padding-top: r(8);
+}
+.shop_titles em{
+    font-size: r(14);
+    color: #3f3f3f;
+}
+.prices{
+    padding-top: r(6);
+ letter-spacing:r(0.6);
+}
+.font20{
+    font-size: r(12);
+    color: #f45353;
+}
+.font32{
+  font-size: r(20);
+    color: #f45353;  
+}
+.add_shop_car{
+    height: r(28);
+    line-height: r(28);
+    display: block;
+    border: 1px solid #c1c1c1;
+    border-radius: r(6);
+    margin-top: r(11);
+    color: #666;
+    text-align: center;
+}
+.add_shop_car em{
+    font-size: r(16);
+}
+.buy_box{
+  background-color: #fff;
+ border-top: 1px solid #d3d3d3;
+ border-bottom: 1px solid #d3d3d3;
+   width: 100%;
+    height: r(52);
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    z-index: 9999999;
+}
+.buy_boxs{
+    width: 100%;
+    height: 100%;
+}
+.flex_1{
+padding-bottom: r(8);
+width: 71%;
+padding-top: r(2);
+//    display: inline-block;
+}
+.rights{
+    width: 60%;
+        text-align: right;
+}
+.pr20{
+    padding-right: r(12);
+    letter-spacing:r(0.6);
+   
+}
+.pr20 em{
+ font-size: r(14);
+   color: #717272;
+}
+.pt14{
+        font-weight: 700;
+    color: #f45353;
+     padding-right: r(12);
+
+    text-align: center;
+}
+.font28{
+    font-size: r(16);
+}
+.font36{
+    font-size: r(22);
+}
+.jiesuan{
+ width: 29%;
+ height: 100%;
+ 
+}
+.jiesuan span{
+  display: block;
+    width: 100%;
+    height: 100%;
+    line-height:r(52);
+    text-align: center;
+    background-color: #f45353;
+}
+.jiesuan span em{
+        color: #fff;
+    font-size: r(18);
+}
+.addprice_title span{
+    color:darkorange;
+       font-family: "PingHei", Microsoft Yahei, SimSun, Arial, Helvetica, sans-serif;
+}

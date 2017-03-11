@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="en" ng-app='myApp'>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/product_.css">
+    <link rel="stylesheet" href="./css/swiper.min.css">
+    <script src="./js/angular.min.js"></script>
+
+
+    <!--    <link href="css/bootstrap.min.css" rel="stylesheet">-->
+    <script src="js/response.js"></script>
+    <title>商品详情</title>
+
+
+
+</head>
+
+<body ng-controller="content" style='height:2000px'>
+    <!--头部开始 实际像素的一半-->
+    <div class="header">
+        <div class="pre fl">
+            <a href="/">
+                &lt; </a>
+        </div>
+
+        <div class="pre fr list">
+            <span class="dian">...</span>
+        </div>
+
+    </div>
+    <!--    拖拽-->
+    <div class="swiper-container" id="slide1">
+
+        <div class="swiper-wrapper">
+            <div class="swiper-slide page1">
+                <img src="./images/10722777185335889.jpg" alt="">
+            </div>
+            <div class="swiper-slide page1">
+                <img src="./images/10722777167576378.jpg" alt="">
+            </div>
+            <div class="swiper-slide page1">
+                <img src="./images/10722777227945686.jpg" alt="">
+            </div>
+            <div class="swiper-slide page1">
+                <img src="./images/10722780610457581.jpg" alt="">
+            </div>
+        </div>
+        <!--这个位置是公共区域-->
+
+        <div class="swiper-pagination"></div>
+    </div>
+    <!--商品信息-->
+    <div class='product_message'>
+        <div class='saleBox'>
+            <div class='price_box'>
+                <h2 class='mess_title'>
+                <em>酷派 cool1 dual  直降100</em>
+            </h2>
+                <p class='peizhi'>
+                    <em>双1300万摄像头,骁龙652处理器,4000mAh大电池,反向充电！</em>
+                </p>
+                <p class='price'>
+                    <b><em class="font28">¥</em><em class="font36">999.00</em></b>
+                </p>
+                <p class='huabei'>
+
+                    <span class='hua_img'></span>
+                    <span class='hua_text'>花呗分期每期最低<i>¥</i><em>89.91</em>起</span>
+                </p>
+            </div>
+            <div class='promise_address'>
+                <div class='address_content'>
+                    <div class='return_to fl'>
+                        送至:
+                    </div>
+                    <div class='address fl'>
+                        <p class='address_top fl'>
+                            <span>{{v1.a}}</span>
+                            <span>{{v2.c}}</span>
+                            <span>{{v3}}</span>
+                        </p>
+                        <p class='address_foot fl'>111</p>
+                        <div class="lianji fr ">
+                            <span class="dian">...</span>
+
+                        </div>
+                    </div>
+                </div>
+                <div class='hid'>
+                    <select ng-model="v1" ng-options="val.a for val in data" ng-change="test(v1)">
+                        <option value="">全部</option>
+                    </select>
+
+                    <select ng-model="v2" ng-options="val.c for val in v1.b" ng-change="test(v2)">
+                        <option value="">全部</option>
+                    </select>
+                    <select ng-model="v3" ng-options="val for val in v2.e" ng-change="test(v1)">
+                        <option value="">全部</option>
+                    </select>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <!--        配置三个选项-->
+    <div class='property-content'>
+        <div class='saleBox_ yi' numss='true'>
+            <dl>
+                <dt><em>已选</em></dt>
+                <dd>
+                    <p><span class='one_a'>银色</span><span class='two_b'>全网通版</span><span class='three_c'>3G+32G</span> <span>1件</span></p>
+                </dd>
+                <span class='top_bottom'>﹀</span>
+            </dl>
+        </div>
+        <ul class='disappear'>
+            <li>
+                <dt>颜色</dt>
+                <dd>
+                    <span class='color_box bg'>
+                <em>银色</em>
+            </span>
+                </dd>
+                <dd>
+                    <span class='color_box'>
+                <em>金色</em>
+            </span>
+                </dd>
+            </li>
+            <li>
+                <dt>版本</dt>
+                <dd>
+                    <span class='color_box1 bg'>
+                <em>全网通版</em>
+            </span>
+                </dd>
+                <dd>
+                    <span class='color_box1'>
+                <em>华晨宇火星全网通版</em>
+            </span>
+                </dd>
+            </li>
+            <li>
+                <dt>容量</dt>
+                <dd>
+                    <span class='color_box2 bg'>
+                <em>3+32G</em>
+            </span>
+                </dd>
+                <dd>
+                    <span class='color_box2'>
+                <em>4+32G</em>
+            </span>
+                </dd>
+                <dd>
+                    <span class='color_box2'>
+                <em>4+64G</em>
+            </span>
+                </dd>
+            </li>
+        </ul>
+    </div>
+    <div class='property-content'>
+        <div class='saleBox_ yi'>
+            <dl>
+                <dt><em>会员服务</em></dt>
+                <dd>
+                    <p><span>乐次元影视会员（3个月）手机机卡绑定x1</span>
+                    </p>
+                </dd>
+                <span class='top_bottom'>﹀</span>
+            </dl>
+        </div>
+        <ul class='vip disappear'>
+            <li>
+                <h3 class="clearfix"><span><em>乐次元影视会员（3个月）手机机卡绑定</em> <b> x 1</b></span> <i>¥<em>0.00</em></i></h3>
+            </li>
+        </ul>
+    </div>
+    <div class='property-content'>
+        <div class='saleBox_'>
+            <dl>
+                <dt><em>推荐商品</em></dt>
+                <dd>
+                    <p>
+                        <span>¥ 49.00 </span>
+                        <span>  cool 保护套装       </span>
+                    </p>
+                </dd>
+                <span class='sele'></span>
+            </dl>
+        </div>
+
+    </div>
+    <!--    评价-->
+    <div class='evaluate'>
+        <div class='sales'>
+            <em class="selectLian">全部评价(11456)</em>
+            <span class="xing_img">
+            <img src="./images/1269149961952114.jpg">
+            </span>
+
+        </div>
+    </div>
+    <div class='pingjia_text' ng-repeat='val in data_b'>
+        <div class='pingjiaBox'>
+            <dl class='h_box'>
+
+                <dd class='user_img'></dd>
+                <dd class='user_name'>
+                    <span class='user_left fl'>
+                      <em class="font24 dark1">{{val.name}}</em>
+                  </span>
+                    <span class='user_right fr'>
+                      <i>
+                 <img ng-src="{{val.img}}" class="star_5">
+                 </i>
+                  </span>
+                </dd>
+
+            </dl>
+            <p class='user_text'>{{val.text}}</p>
+            <p class="suer_time"><em class="gray5 font20">{{val.time}}</em></p>
+        </div>
+    </div>
+    <div class='pingjia_text' ng-repeat='val in data_b' ng-show='bl1'>
+        <div class='pingjiaBox'>
+            <dl class='h_box'>
+
+                <dd class='user_img'></dd>
+                <dd class='user_name'>
+                    <span class='user_left fl'>
+                      <em class="font24 dark1">{{val.name}}</em>
+                  </span>
+                    <span class='user_right fr'>
+                      <i>
+                 <img ng-src="{{val.img}}" class="star_5">
+                 </i>
+                  </span>
+                </dd>
+
+            </dl>
+            <p class='user_text'>{{val.text}}</p>
+            <p class="suer_time"><em class="gray5 font20">{{val.time}}</em></p>
+        </div>
+    </div>
+
+    <div class='more_pingjia' ng-click='dian()'>
+        <span class='more_text'>
+            <em>查看更多评价</em>
+        </span>
+    </div>
+    <!--    图文详情-->
+    <div class='img_father'>
+        <div class='tuwen'>
+            <b><em class="font26">图文详情</em></b>
+        </div>
+        <p ng-repeat='vals in data_c'><img ng-src="{{vals.img}}" alt="" class='img_list'></p>
+    </div>
+    <!--点击加入购物车-->
+    <div class='buy'>
+        <a href="/shopCar" class='buyCar fl'>
+            <span><img src="./images/8577209172c745a484b0b406e019a815.png" alt=""></span>
+            <span class='num'>{{num}}</span>
+        </a>
+        <a class='add fl' ng-click='add()'>
+            <em>加入购物车</em>
+        </a>
+    </div>
+
+
+
+
+
+
+
+
+    <script src='js/jquery-1.11.1.min.js'></script>
+    <script src="./js/swiper.min.js"></script>
+    <script src='js/product_.js'></script>
+
+    <!--    <script src="js/bootstrap.min.js"></script>-->
+
+    <script src='./js/faskclick.js'></script>
+    <script>
+        // 优化点击事件
+        FastClick.attach(document.body);
+    </script>
+    <script>
+        var app = angular.module("myApp", []);
+
+
+        app.controller("content", function ($scope) {
+            $scope.bl1 = false;
+
+            $scope.v3 = '请选择地址';
+            //        简单模仿的地区
+            $scope.data = [
+                {
+                    a: "北京",
+                    b: [{
+                        c: '北京市',
+                        e: ['东城区', '西城区', '崇文区', '宣武区', '朝阳区']
+            }]
+        },
+                {
+                    a: "上海",
+                    b: [{
+                        c: '上海市',
+                        e: ['浦东新区', '黄浦区', '青浦区', '卢湾区', '闸北区', '静安区']
+            }]
+        },
+                {
+                    a: "山东",
+                    b: [{
+                        c: '济南',
+                        e: ['市中', '历下区', '槐荫区', '天桥区', '历城区', '长清区', '平阴县', '济阳县', '商河县']
+            }, {
+                        c: '枣庄',
+                        e: ['市中区', '薛城区', '台儿庄区', '峄城区', '山亭区', '滕州市']
+            }]
+        },
+];
+
+            $scope.data_c = [{
+                    img: './images/1314209679750448.jpg'
+                },
+                {
+                    img: './images/1314212097152888.jpg'
+                },
+                {
+                    img: './images/1314214988825099.jpg'
+                },
+                {
+                    img: './images/1314217289496190.jpg'
+                },
+                {
+                    img: './images/1314219601356886.jpg'
+                },
+                {
+                    img: './images/1314222000820704.jpg'
+                },
+                {
+                    img: './images/1314224247543275.jpg'
+                },
+                {
+                    img: './images/1314226546345384.jpg'
+                },
+                {
+                    img: './images/1314228831991565.jpg'
+                },
+                {
+                    img: './images/3472022239097969.jpg'
+                },
+      ];
+
+
+
+
+            $scope.data_b = [
+                {
+                    name: '1371xxx0771',
+                    img: './images/1269150025591070.jpg',
+                    text: '用了一段时间才来评论，手机日常使用还算过得去.',
+                    time: '2017-01-18 23:14:49'
+        },
+                {
+                    name: '136xxxxx136_752_417',
+                    img: './images/1269150025591070.jpg',
+                    text: 'good',
+                    time: '2017-01-18 23:14:49'
+        },
+                {
+                    name: '1862xxx3953_742',
+                    img: './images/1269150025591070.jpg',
+                    text: '好，很好，非常好',
+                    time: '2017-01-18 18:25:24'
+        },
+
+];
+            $scope.dian = function () {
+                $scope.bl1 = true;
+            }
+
+            $scope.num = 0;
+            $scope.add = function () {
+                $scope.num += 2;
+                alert('加入成功')
+            }
+
+
+
+        });
+    </script>
+
+
+
+
+
+
+
+
+
+</body>
+
+</html>

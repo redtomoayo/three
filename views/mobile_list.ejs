@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="en" ng-app='myApp'>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/list.css">
+    <link rel="stylesheet" href="./css/swiper.min.css">
+
+    <!--    <link href="css/bootstrap.min.css" rel="stylesheet">-->
+    <script src='js/angular.min.js'></script>
+    <script src="js/response.js"></script>
+    <title>商品列表</title>
+
+
+
+
+</head>
+
+<body ng-controller='content'>
+    <!--头部搜索开始-->
+    <div class='header'>
+        <div class='pre fl'>
+            <a href="/">
+                < </a>
+        </div>
+        <div class="inputs">
+            <div class="search">
+                <img src="./images/hd_search_21.png" alt="">
+            </div>
+            <input type="text" class="sousuo" placeholder="运动蓝牙耳机" ng-model='ps'>
+        </div>
+        <div class='nav_list fl'>
+            <span class='dian'>...</span>
+        </div>
+
+    </div>
+    <!--内容选项-->
+    <div class='container'>
+        <div class='l_con fl'>
+            <ul>
+                <li ng-init="select='one'" ng-click="select='one'" class='c1 sty'>
+                    <div class='rongqi c2'>
+                        超级手机
+                    </div>
+                </li>
+                <li ng-click="select='two'" class='sty'>
+                    <div class='rongqi'>
+                        超级电视
+
+                    </div>
+                </li>
+                <li ng-click="select='three'" class='sty'>
+                    <div class='rongqi'>
+                        酷派手机
+
+                    </div>
+                </li>
+                <li ng-click="select='four'" class='sty'>
+                    <div class='rongqi'>
+                        智能硬件
+
+                    </div>
+                </li>
+                <li ng-click="select='five'" class='sty'>
+                    <div class='rongqi'>
+                        配件
+                    </div>
+                </li>
+                <li ng-click="select='six'" class='sty'>
+                    <div class='rongqi'>
+                        娱乐周边
+
+                    </div>
+                </li>
+                <li ng-click="select='seven'" class='sty'>
+                    <div class='rongqi'>
+                        体育周边
+
+                    </div>
+                </li>
+                <li ng-click="select='eight'" class='sty'>
+                    <div class='rongqi'>
+                        乐视会员
+
+                    </div>
+                </li>
+                <li ng-click="select='nine'" class='sty'>
+                    <div class='rongqi'>
+                        乐钻充值
+
+                    </div>
+                </li>
+                <li ng-click="select='ten'" class='sty'>
+                    <div class='rongqi'>
+                        金融
+
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <div class='r_con fr' ng-switch="select">
+            <div class='father_a' ng-switch-when="one">
+                <div class='r_con_top'>
+                    <a href=""><img src="./images/7186873771190794.jpg" alt=""></a>
+                </div>
+                <section>
+                    <h2 class='h2'><em>第3代超级手机</em></h2>
+                </section>
+                <div class='img_list'>
+                    <ul>
+                        <li ng-repeat='vals in data_b|filter:{name:ps}'>
+                            <a href="/product">
+                                <div class='img_con'>
+                                    <img ng-src='{{vals.img}}' alt="">
+                                </div>
+                                <span>{{vals.name}}</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <section>
+                    <h2 class='h2'><em>第2代超级手机</em></h2>
+                </section>
+                <div class='img_list'>
+                    <ul>
+                        <li ng-repeat='vals in data_c|filter:{name:ps}'>
+                            <a href="product_list.html">
+                                <div class='img_con'>
+                                    <img ng-src='{{vals.img}}' alt="">
+                                </div>
+                                <span>{{vals.name}}</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+
+            </div>
+
+            <div ng-switch-when="two" class='father_a'>
+                <section>
+                    <h2 class='h2'><em>爆款推荐</em></h2>
+                </section>
+                <div class='img_list'>
+                    <ul>
+                        <li ng-repeat='vals in data_d|filter:{name:ps}'>
+                            <a href="">
+                                <div class='img_con'>
+                                    <img ng-src='{{vals.img}}' alt="">
+                                </div>
+                                <span>{{vals.name}}</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class='img_list_foot'>
+                    <div>
+                        <dl class='dinashi_box'>
+                            <dt class='fl'><img src="./images/4846163213975967.jpg" alt=""></dt>
+                            <dd class='fl'>
+                                <div class='dianshi_title'><em>X系列4K&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;></em></div>
+                            </dd>
+                        </dl>
+                    </div>
+                    <div>
+                        <dl class='dinashi_box'>
+                            <dt class='fl'><img src="./images/4846163213975967.jpg" alt=""></dt>
+                            <dd class='fl'>
+                                <div class='dianshi_title'><em>X系列4K&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;></em></div>
+                            </dd>
+                        </dl>
+                    </div>
+                    <div>
+                        <dl class='dinashi_box'>
+                            <dt class='fl'><img src="./images/4846163213975967.jpg" alt=""></dt>
+                            <dd class='fl'>
+                                <div class='dianshi_title'><em>X系列4K&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;></em></div>
+                            </dd>
+                        </dl>
+                    </div>
+                    <div>
+                        <dl class='dinashi_box'>
+                            <dt class='fl'><img src="./images/4846163213975967.jpg" alt=""></dt>
+                            <dd class='fl'>
+                                <div class='dianshi_title'><em>X系列4K&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;></em></div>
+                            </dd>
+                        </dl>
+                    </div>
+                </div>
+            </div>
+
+            <div ng-switch-when="three">
+                <div class='r_con_top'>
+                    <a href=""><img src="./images/7796625565840129.jpg" alt=""></a>
+                </div>
+                <section>
+                    <h2 class='h2'><em>LeEco inside</em></h2>
+                </section>
+                <div class='img_list'>
+                    <ul>
+                        <li ng-repeat='vals in data_e|filter:{name:ps}'>
+                            <a href="">
+                                <div class='img_con'>
+                                    <img ng-src='{{vals.img}}' alt="">
+                                </div>
+                                <span>{{vals.name}}</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+
+            <div ng-switch-when="four">
+                <div class='r_con_top'>
+                    <a href=""><img src="./images/7365906920304266.jpg" alt=""></a>
+                </div>
+                <div class='img_list_foot'>
+                    <div ng-repeat='vals in data_f'>
+                        <dl class='dinashi_box'>
+                            <dt class='fl'><img ng-src="{{vals.img}}" alt=""></dt>
+                            <dd class='fl'>
+                                <div class='dianshi_title'><em>{{vals.name}}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;></em></div>
+                            </dd>
+                        </dl>
+                    </div>
+                </div>
+
+            </div>
+            <div ng-switch-when="five">
+
+                <div class='n_o'>服务器罢工了...</div>
+            </div>
+            <div ng-switch-when="six">
+
+                <div class='n_o'>服务器罢工了...</div>
+            </div>
+            <div ng-switch-when="seven">
+
+                <div class='n_o'>服务器罢工了...</div>
+            </div>
+            <div ng-switch-when="eight">
+
+                <div class='n_o'>服务器罢工了...</div>
+            </div>
+            <div ng-switch-when="nine">
+
+                <div class='n_o'>服务器罢工了...</div>
+            </div>
+            <div ng-switch-when="ten">
+
+                <div class='n_o'>服务器罢工了...</div>
+            </div>
+
+
+        </div>
+    </div>
+
+
+    <script>
+        var app = angular.module("myApp", []);
+        app.controller("content", function ($scope) {
+
+            $scope.data_b = [
+                {
+                    name: '乐s3',
+                    img: 'images/5457701730112419.jpg'
+                },
+                {
+                    name: '乐Pro3',
+                    img: 'images/5457714996707544.jpg'
+                },
+                {
+                    name: '乐Pro3 张艺谋版',
+                    img: 'images/5457738397624756.jpg'
+                }
+    ]
+            $scope.data_c = [
+                {
+                    name: '乐2',
+                    img: 'images/5457701730112419.jpg'
+                },
+                {
+                    name: '乐2 Pro',
+                    img: 'images/5457714996707544.jpg'
+                },
+                {
+                    name: '乐Max 2',
+                    img: 'images/5457738397624756.jpg'
+                },
+                {
+                    name: '会员机',
+                    img: 'images/5457738397624756.jpg'
+                },
+                {
+                    name: '乐2 爵迹版',
+                    img: 'images/5457738397624756.jpg'
+                },
+                {
+                    name: '乐2 Pro 爵迹版',
+                    img: 'images/5457738397624756.jpg'
+                },
+    ]
+            $scope.data_d = [
+                {
+                    name: '超4 X40',
+                    img: 'images/11386855543812370.jpg'
+                },
+                {
+                    name: '超4 X43',
+                    img: 'images/11386903195155270.jpg'
+                },
+                {
+                    name: '超4 X50',
+                    img: 'images/11387194984104245.jpg'
+                },
+                {
+                    name: '超4 X50Pro',
+                    img: 'images/5294784363539617.jpg'
+                },
+                {
+                    name: 'X65S',
+                    img: 'images/5294815100873821.jpg'
+                },
+                {
+                    name: 'uMax85',
+                    img: 'images/5294843401671915.jpg'
+                },
+    ]
+            $scope.data_e = [
+                {
+                    name: 'cool1 dual（双',
+                    img: 'images/3464262441058145.jpg'
+                },
+                {
+                    name: 'Cool  1C',
+                    img: 'images/3464186620146510.jpg'
+                },
+                {
+                    name: 'Cool S1',
+                    img: 'images/4854824816895128.jpg'
+                },
+
+    ]
+            $scope.data_f = [
+                {
+                    name: '乐视盒子',
+                    img: 'images/5285938219273445.jpg'
+                },
+                {
+                    name: '屏霸',
+                    img: 'images/5367025183936493.jpg'
+                },
+                {
+                    name: '乐视随身看',
+                    img: 'images/7172884806810651.jpg'
+                },
+                {
+                    name: '乐小宝动画屋1S',
+                    img: 'images/5203909169447467.jpg'
+                },
+                {
+                    name: '蓝牙耳机2代',
+                    img: 'images/12004865993128801.jpg'
+                },
+                {
+                    name: 'LeVR Pro 1',
+                    img: 'images/9081870353480797.jpg'
+                },
+                {
+                    name: '乐视K歌智能',
+                    img: 'images/12618728807152788.jpg'
+                },
+
+
+    ]
+        });
+    </script>
+
+
+
+
+
+
+
+
+
+
+    <script src='js/jquery-1.11.1.min.js'></script>
+    <script src="./js/swiper.min.js"></script>
+
+
+    <!--    <script src="js/bootstrap.min.js"></script>-->
+
+    <script src='./js/faskclick.js'></script>
+    <script>
+        // 优化点击事件
+        FastClick.attach(document.body);
+    </script>
+
+    <script>
+        //    点击左边列表改变样式
+
+        $('.sty').each(function () {
+            var i = $(this).index();
+            $(this).click(function () {
+                $('.sty').removeClass('c1');
+                $(this).addClass('c1');
+            })
+        });
+        $('.rongqi').each(function () {
+            var i = $(this).index();
+            $(this).click(function () {
+                $('.rongqi').css('border-bottom', '1px solid #d3d3d3');
+
+                $('.rongqi').removeClass('c2');
+                $(this).addClass('c2');
+                $(this).css('border-bottom', '0px');
+            })
+        })
+    </script>
+
+
+
+
+
+
+
+</body>
+
+</html>

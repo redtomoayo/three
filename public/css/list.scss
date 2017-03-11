@@ -1,0 +1,267 @@
+@charset "utf-8";
+$fontSize:20;
+
+@function r($px){
+	@return $px/$fontSize+rem;
+}
+
+
+@mixin setPm($name,$val...){
+	// ...是固定写法,在值不固定的时候
+	//$val 往后所有的值
+	$max:length($val);//4
+	$str:'';
+
+
+	// 进行值得计算
+// 12 34 57 78
+	@for $i from 1 through $max{
+	$value:nth($val,$i)/$fontSize;
+	
+	$str:#{$str+$value}rem;
+	
+	@if $i<$max{
+		$str:#{$str+" "};
+	}
+
+	}
+	#{$name}:$str;
+}
+.header{
+    width: 100%;
+    height: r(53);
+
+    background-color: #f2f2f2;
+
+}
+.pre{
+    width: r(54);
+    height:r(53);
+    text-align: center;
+    line-height: r(53);
+    font-family: "PingHei", Microsoft Yahei, SimSun, Arial, Helvetica, sans-serif;
+}
+.pre a{
+    font-size: r(30);
+        color: #898989;
+}
+.inputs{
+      background: white;
+    height: r(34);
+    width: r(266);
+    float: left;
+//    margin-top: 0.7rem;
+//    margin-left: 0.05rem;
+    border-radius: 0.4rem 0.4rem 0.4rem 0.4rem;
+    line-height: 0.85rem;
+    margin-top: r(12);
+}
+.search img {
+    margin-left: 0.5rem;
+    width: 0.85rem;
+    height: 0.9rem;
+    margin-top: 0.35rem;
+    float: left;
+}
+.sousuo {
+    border: 0;
+    margin-left: 0.125rem;
+    width: 84%;
+    font-size: 0.35rem;
+    margin-top: 0.4rem;
+    height: 0.8rem;
+    background-color: white;
+}
+.nav_list{
+    position: relative;
+    width: r(50);
+    height: r(53);
+//    background: red;
+}
+.dian{
+        width: 100%;
+    line-height: r(40);
+    height: r(53);
+    color: #8a8787;
+    display: block;
+    text-align: center;
+    font-weight: bold;
+    font-size: r(32);
+}
+.container{
+    width: 100%;
+//    height:614px;
+//    background: red;
+       
+}
+.l_con{
+        width: 27.8%;
+    height: auto;
+     background: #f7f7f7;
+}
+.l_con ul li{
+    width: 100%;
+    height: r(62);
+}
+.rongqi{
+    width: 100%;
+    height: 100%;
+        display: block;
+    font-size: r(10);
+    width: 88%;
+    height: auto;
+    overflow: hidden;
+    padding: r(22) r(0) r(22) r(0);
+    margin: 0 auto;
+    color: #5b5b5b;
+    text-align: center;
+    border-bottom: 1px solid #d3d3d3;
+}
+.rongqi a{
+        display: block;
+    font-size: r(10);
+    width: 88%;
+    height: auto;
+    overflow: hidden;
+    padding: r(22) r(0) r(22) r(0);
+    margin: 0 auto;
+    color: #5b5b5b;
+    text-align: center;
+    border-bottom: 1px solid #d3d3d3;
+}
+.r_con{
+    width: 72.2%;
+    height: 600px;
+    overflow-y: auto;
+    margin-left: -1px;
+  
+    z-index: 1;
+    background-color: #fff;
+}
+.r_con_top{
+    padding: r(6);
+    height: auto;
+    overflow: hidden;
+    max-height: r(84);
+}
+.r_con_top a {
+    display: block;
+    width: 100%;
+}
+.r_con_top a img{
+    width: 100%;
+}
+.father_a{
+    width: 100%;
+    height: auto;
+}
+section{
+    margin: r(32) r(18) r(12);
+    border-bottom: 1px solid #d3d3d3;
+    position: relative;
+}
+.h2{
+    padding: r(6);
+    background: #fff;
+    height: r(16);
+    line-height: r(16);
+    position: absolute;
+    top: 50%;
+    margin-top: r(-14);
+    left: 50%;
+    margin-left: r(-48.5);
+}
+.h2 em{
+  font-size: r(10);
+    color: #999;
+}
+.img_list{
+   padding-left: r(3);
+    padding-right: r(3);
+    height: auto;
+    overflow: hidden;
+}
+.img_list ul li{
+    width: 33.3%;
+    float: left;
+    padding-bottom: r(13);
+    min-height: r(120);
+}
+.img_list ul li a{
+    width: 100%;
+    height: auto;
+    display: block;
+//    padding: r(0) r(5);
+    text-align: center;
+    
+}
+.img_con{
+    width: 100%;
+    height: r(70);
+}
+.img_con img{
+    width: 100%;
+    height: 100%;
+}
+.img_list ul li span{
+    font-size: r(10);
+    color: #777;
+}
+.img_list_foot{
+    border-top: 1px solid #d3d3d3;
+    margin: 0 r(12);
+    height: auto;
+    overflow: hidden;
+      
+}
+.dinashi_box{
+    width: 100%;
+    height: auto;
+}
+.dinashi_box dt{
+   width: r(50);
+    height: r(50);
+    padding: r(8.5) 0;
+    margin-right: r(14); 
+}
+.dinashi_box dt img{
+      width: r(50);
+    height: r(50);
+}
+.dinashi_box dd{
+    width: r(181);
+    height: r(50);
+        border-bottom: 1px solid #d3d3d3;
+    padding: r(8.5) 0;
+    text-align: center;
+    line-height: r(50);
+}
+.dianshi_title{
+   
+   
+    height: r(50);
+}
+.dianshi_title em{
+    padding-right: r(22);
+    color: #ccc;
+}
+.c1{
+     background: white;
+}
+.c2{
+   
+    color:red;
+}
+.n_o{
+    width: 100%;
+//    writing-mode:tb-rl;
+    font-family: "PingHei", Microsoft Yahei, SimSun, Arial, Helvetica, sans-serif;
+    font-size: r(32);
+    text-align: center;
+    color: #ccc;
+    
+}
+
+
+
+

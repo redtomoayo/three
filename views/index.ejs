@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html lang="en" ng-app='myApp'>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/scss.css">
+    <link rel="stylesheet" href="./css/swiper.min.css">
+
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <script src="js/response.js"></script>
+    <script src="js/angular.min.js"></script>
+
+    <title>主页</title>
+
+    <style>
+
+    </style>
+
+
+
+</head>
+
+<body ng-controller='content'>
+    <!--头部开始-->
+    <div class='glob_head'>
+        <div class='head'>
+            <div class='h_content'>
+                <a href="" class='h_logo fl'>
+                    <span class='logo_spa'><img src="./images/logo.png" alt=""></span>
+                </a>
+                <div class="inputs">
+                    <div class="search">
+                        <img src="./images/hd_search_21.png" alt="">
+                    </div>
+                    <input type="text" class="sousuo" placeholder="乐M2">
+                </div>
+                <a href="" class='gwbus fl'>
+                    <img src="./images/8577209172c745a484b0b406e019a815.png" alt="">
+                </a>
+                <a href="/login" class='user fl'>
+                   <% var bool=bool||false%>
+                       <% if(bool){%>
+                          <%= name%>
+                        <%}else{%>
+                    <span class="glyphicon glyphicon-user "></span>
+                            <%}%>
+                </a>
+
+            </div>
+        </div>
+    </div>
+    <!--轮播-->
+
+    <div class="swiper-container" id="slide1">
+
+        <div class="swiper-wrapper">
+            <div class="swiper-slide page1">
+
+            </div>
+            <div class="swiper-slide page2">
+
+            </div>
+            <div class="swiper-slide page3">
+
+            </div>
+            <div class="swiper-slide page4">
+
+            </div>
+            <div class="swiper-slide page5">
+
+            </div>
+
+        </div>
+        <!--这个位置是公共区域-->
+
+        <div class="swiper-pagination"></div>
+
+
+    </div>
+    <!--    轮播下面的图片导航-->
+
+    <div class="swiper-container swiper-container-horizontal" id="slide2">
+
+        <div class="swiper-wrapper">
+            <div class="swiper-slide pages1 swiper-slide-active" style="width: 375px;">
+                <ul>
+                    <li class="lis" ng-repeat='val in data'>
+
+                        <a href="/mobile_list"><img ng-src="{{val.img}}" alt=""></a>
+                        <span>{{val.spa}}</span>
+
+                    </li>
+                </ul>
+
+
+            </div>
+            <div class="swiper-slide pages2 swiper-slide-next" style="width: 375px;">
+                <ul>
+                    <li class="lis" ng-repeat='val in data'>
+
+                        <a href="mobile_list.html"><img ng-src="{{val.img}}" alt=""></a>
+                        <span>{{val.spa}}</span>
+
+                    </li>
+                </ul>
+
+            </div>
+
+        </div>
+        <!--这个位置是公共区域-->
+
+        <div class="swiper-pagination file swiper-pagination-bullets"><span class="swiper-pagination-bullet swiper-pagination-bullet-active"></span><span class="swiper-pagination-bullet"></span></div>
+        <!--   html部分-->
+        <!--  如果我要加一个控件-->
+
+
+    </div>
+    <!--   竖屏轮播-->
+
+    <div class='zixun'>
+
+
+        <div class="swiper-container" id="slide3">
+
+            <div class="swiper-wrapper wrap">
+                <div class="swiper-slide page1">
+                    <div class='zixun_left fl one_im'>
+                        <img src="./images/shu1.jpg" alt="">
+                    </div>
+                    <div class='zixun_right fl'>
+                        <p class='p1'>绝地逆转 乐视获168亿战略投资</p>
+                        <p class='p2'>有望冲刺中国最大互联网企业</p>
+                    </div>
+                </div>
+                <div class="swiper-slide page2">
+                    <div class='zixun_left fl two_im'>
+                        <img src="./images/shu2.jpg" alt="">
+                    </div>
+                    <div class='zixun_right fl'>
+                        <p class='p1'>乐视手机奉出升级换新省钱攻略</p>
+                        <p class='p2'>“乐视生态年货节”火爆进行中</p>
+                    </div>
+                </div>
+                <div class="swiper-slide page3">
+                    <div class='zixun_left fl three_im'>
+                        <img src="./images/shu3.jpg" alt="">
+                    </div>
+                    <div class='zixun_right fl'>
+                        <p class='p2'>贾跃亭：FF91主打高端商务人群</p>
+                        <p class='p2'>LeSEE更适合年轻人 互联网化</p>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+        <!--    竖屏轮播右边的生态头条-->
+        <div class='shengtai_title fr'>
+            <img src="./images/shengtai.jpg" alt="">
+        </div>
+    </div>
+    <!--     竖屏轮播下的资讯-->
+    <div class='news_box'>
+        <ul>
+            <li>
+                <a href=""><img src="./images/6762180470758616 (1).jpg" alt=""></a>
+            </li>
+            <li>
+                <a href=""><img src="./images/7360728430168515.jpg" alt=""></a>
+            </li>
+        </ul>
+    </div>
+    <!--     热卖精选-->
+    <div class='storeBox'>
+        <h2 class='hot_title'>热卖精选</h2>
+        <ul class='hot_top'>
+            <li>
+                <div class='down_img '>
+                    <a href=""><img src="./images/5295246703661734.jpg" alt=""></a>
+                </div>
+            </li>
+            <li>
+                <div>
+                    <div class='down_img '>
+                        <a href=""><img src="./images/5892997834091846.jpg" alt=""></a>
+                    </div>
+                    <div class='down_img '>
+                        <a href=""><img src="./images/5290673625649689.jpg" alt=""></a>
+                    </div>
+                </div>
+
+            </li>
+        </ul>
+        <ul class='hot_top'>
+            <li>
+                <div>
+                    <div class='down_img '>
+                        <a href=""><img src="./images/5293915342181990.jpg" alt=""></a>
+                    </div>
+                </div>
+            </li>
+
+            <li>
+                <div>
+                    <div class='down_img '>
+                        <a href=""><img src="./images/5295268808452802.jpg" alt=""></a>
+                    </div>
+                </div>
+            </li>
+        </ul>
+        <ul class='hot_top hot_foot'>
+            <li>
+                <div>
+                    <div class='down_img '>
+                        <a href=""><img src="./images/7362210424217226.jpg" alt=""></a>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <div>
+                    <div class='down_img '>
+                        <a href=""><img src="./images/7362290231787520.jpg" alt=""></a>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <div>
+                    <div class='down_img '>
+                        <a href=""><img src="./images/7362360597748512.jpg" alt=""></a>
+                    </div>
+                </div>
+            </li>
+        </ul>
+    </div>
+    <!--   乐视超级手机    hot_top下的li是50%, hot_foot下的li是33.3%; anhei_first下的li是100%;-->
+    <div class='storeBox abs'>
+        <p class='super_title'>
+            <span class='fl'>乐视超级手机</span>
+            <span class='fr'>更多 ></span>
+        </p>
+        <ul class='hot_top anhei_first'>
+            <li>
+                <div>
+                    <div class='down_img '>
+                        <a href=""><img src="./images/7595292890516867.jpg" alt=""></a>
+                    </div>
+                </div>
+            </li>
+        </ul>
+        <ul class='hot_top hot_foot'>
+            <li>
+                <div>
+                    <div class='down_img '>
+                        <a href=""><img src="./images/3581135730016975.jpg" alt=""></a>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <div>
+                    <div class='down_img '>
+                        <a href=""><img src="./images/7187720381134804.jpg" alt=""></a>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <div>
+                    <div class='down_img '>
+                        <a href=""><img src="./images/7187044042284100.jpg" alt=""></a>
+                    </div>
+                </div>
+            </li>
+        </ul>
+
+
+
+
+    </div>
+    <!--  智能硬件-->
+ <%for(var i=0;i<data.length;i++){%>
+    <div class='storeBox'>
+        <h2 class='hot_title'>智能硬件</h2>
+        <ul class='hot_top anhei_first'>
+            <li>
+                <div>
+                    <div class='down_img '>
+                        <a href=""><img src='<%=data[i].img1%>' alt=""></a>
+                    </div>
+                </div>
+            </li>
+        </ul>
+        <ul class='store4 '>
+            <li class='big_box'>
+                <div>
+                    <div class='down_img '>
+                        <a href=""><img src='<%=data[i].img2%>' alt=""></a>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <div>
+                    <div class='down_img '>
+                        <a href=""><img src='<%=data[i].img3[0]%>' alt=""></a>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <div>
+                    <div class='down_img '>
+                        <a href=""><img src='<%=data[i].img3[1]%>' alt=""></a>
+                    </div>
+                </div>
+            </li>
+        </ul>
+        <ul class='store4'>
+            <li>
+                <div>
+                    <div class='down_img '>
+                        <a href=""><img src='<%=data[i].img4[0]%>' alt=""></a>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <div>
+                    <div class='down_img '>
+                        <a href=""><img src='<%=data[i].img4[1]%>' alt=""></a>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <div>
+                    <div class='down_img '>
+                        <a href=""><img src='<%=data[i].img4[2]%>' alt=""></a>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <div>
+                    <div class='down_img '>
+                        <a href=""><img src='<%=data[i].img4[3]%>' alt=""></a>
+                    </div>
+                </div>
+            </li>
+        </ul>
+    </div>
+ <%}%>
+    <!--   配件-->
+<!--
+    <div class='storeBox'>
+        <h2 class='hot_title'>配件</h2>
+        <ul class='hot_top anhei_first'>
+            <li>
+                <div>
+                    <div class='down_img '>
+                        <a href=""><img src="./images/7596306665672961.jpg" alt=""></a>
+                    </div>
+                </div>
+            </li>
+        </ul>
+        <ul class='store4 '>
+            <li class='big_box'>
+                <div>
+                    <div class='down_img '>
+                        <a href=""><img src="./images/4595353712953767.jpg" alt=""></a>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <div>
+                    <div class='down_img '>
+                        <a href=""><img src="./images/7602924283001152.jpg" alt=""></a>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <div>
+                    <div class='down_img '>
+                        <a href=""><img src="./images/7602896660030159.jpg" alt=""></a>
+                    </div>
+                </div>
+            </li>
+        </ul>
+        <ul class='store4'>
+        
+
+            <li>
+                <div>
+                    <div class='down_img '>
+                        <a href=""><img src="./images/7602862925120772.jpg" alt=""></a>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <div>
+                    <div class='down_img '>
+                        <a href=""><img src="./images/7609297521133206.jpg" alt=""></a>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <div>
+                    <div class='down_img '>
+                        <a href=""><img src="./images/4576496742451978.jpg" alt=""></a>
+                    </div>
+                </div>
+            </li>
+        </ul>
+    </div>
+-->
+    <!--  点击返回顶部-->
+    <div class='return_top'>
+        <p>↑</p>
+        <p>顶部</p>
+    </div>
+
+    <!--尾部开始-->
+    <div class='im_footer'>
+        <ul>
+            <li><a href="">App</a></li>
+            <li><a href="">触屏版</a></li>
+            <li><a href="">电脑版</a></li>
+        </ul>
+        <div class='tell'>
+            <a href="">客服热线 1010-9000</a>
+            <a href="">意见反馈</a>
+        </div>
+        <p>©2016乐视商城</p>
+    </div>
+
+
+
+
+
+
+
+
+
+    <script src='js/jquery-1.11.1.min.js'></script>
+    <script src="./js/swiper.min.js"></script>
+    <script src='js/1.js'></script>
+
+    <script src="js/bootstrap.min.js"></script>
+
+    <script src='./js/faskclick.js'></script>
+    <script>
+        // 优化点击事件
+        FastClick.attach(document.body);
+    </script>
+    <script>
+    </script>
+
+    <script>
+//        console.log( $('.user').text());
+//        $(function(){
+//          if($('.user').text()=='wang'){
+//            console.log('1');
+//        }  
+//        })
+        
+    </script>
+
+
+
+
+
+
+
+</body>
+
+</html>

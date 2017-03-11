@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <title>Document</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/zhece.css">
+
+     <script src="js/response_login.js"></script>
+</head>
+<body>
+     <div id='#wraper'>
+         <div class="top">
+          <div class="pre"><a href="index.html" style="color:white">＜</a></div>
+          <span class="meituan">会员注册</span>
+
+          </div>
+          <div class='login-box'>
+<!--              <form action="/zc" method='post' >-->
+                  <ul class='codebox'>
+                      <li class=' name'><input type="text" class='a codebox-input ' placeholder="请输入账号" name='uname'>
+                      <span></span>
+                    </li>
+                      
+
+                      <li class='box name'><input type="password" class='b codebox-input ' placeholder="请输入密码" name='upass'>
+                       <span></span>
+                      </li>
+                      <li class='box name'><input type="password" class='c codebox-input ' placeholder="请再次输入密码" > <span></span></li>
+                      <li class='box name'><input type="submit" class="d j_submit" name="doregister" value="注册"></li>
+                  </ul>
+<!--              </form>-->
+          </div>
+     </div>
+  
+  
+    
+      
+      <script src='js/jquery-1.11.1.min.js'></script>
+      <script>
+          var bol=true;
+    $('.a').focus(function(){
+        $(this).next().html('请输入4-20位数字字母下划线');
+    });
+     $('.a').blur(function(){
+        var str=$(this).val();
+         var patt=/^([0-9a-zA-Z_\-\u2E80-\u9FFF]){4,20}$/;
+         	if(patt.test(str)){
+                $(this).next().html('用户名可用');
+			
+			
+				}else{
+				 $(this).next().html('用户名不可用');
+			bol=false;
+				}
+ });
+          $('.b').focus(function(){
+               $(this).next().html('请输入4-10位数字字母下划线');
+          });
+          $('.b').blur(function(){
+              var str=$(this).val();
+              var pattd=/^\d{4,10}$/;
+			var pattz=/^[\da-z]{4,10}$/;
+			var patt=/^([\dA-Z]){4,10}$/i;
+             if(pattd.test(str)){
+			$(this).next().html('低级别');
+			
+			
+			}else if(pattz.test(str)){
+			$(this).next().html('中级别');
+			
+			}else if(patt.test(str)){
+			$(this).next().html('高级别');
+			
+			}
+			else{
+			$(this).next().html('密码不符合要求 请重新输入');	
+			bol=false;
+			
+			}
+
+          });
+          $('.c').focus(function(){
+              $(this).next().html('请再次输入密码');
+          })
+          $('.c').blur(function(){
+              if($('.b').val()==$('.c').val()){
+                  $('.c').next().html('密码一致');
+              }else{
+                 $('.c').next().html('密码一不致');  
+                 bol=false;
+              }
+          });
+         $('.d').click(function(){
+             
+             
+             if(bol){
+                 if($('.a').val()==''||$('.b').val()==''||$('.c').val()==''){
+                     alert('不合法1');
+                 }else{
+//                   alert('合法');  
+                    var data = {
+        uname: $('.a').val(),
+        upass: $('.b').val()
+                        };
+    $.post("/zc",
+           {uname: $('.a').val(),
+            upass: $('.b').val()
+           }, 
+           function(data){
+//        alert(data);
+        if(data=='此账号已被注册'){alert(data);}else{
+            location.href='/login';
+            alert(data);
+        }
+        
+       
+                });
+            }
+                 
+             }else{
+                alert('不合法');
+             }
+             
+//             return bol;
+         })
+          
+          
+    </script>
+</body>
+</html>

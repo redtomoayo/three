@@ -1,0 +1,272 @@
+body {
+  background: #f2f2f2;
+  font-family: "PingHei", Microsoft Yahei, SimSun, Arial, Helvetica, sans-serif; }
+
+.header {
+  width: 100%;
+  height: 2.6rem; }
+
+.pre {
+  width: 2.6rem;
+  height: 2.6rem;
+  text-align: center;
+  line-height: 2.6rem;
+  font-family: "PingHei", Microsoft Yahei, SimSun, Arial, Helvetica, sans-serif; }
+
+.pre a {
+  font-size: 1.25rem;
+  color: #898989; }
+
+.list span {
+  color: #898989;
+  font-size: 0.35rem; }
+
+.titleName {
+  width: 72%;
+  height: 100%;
+  line-height: 2.6rem;
+  overflow: hidden;
+  text-align: center; }
+
+.titleName em {
+  font-size: 0.9rem;
+  color: #5e5b5b; }
+
+.buyCar {
+  width: 100%;
+  height: auto;
+  padding-bottom: 5.9rem; }
+
+.buyBox {
+  background: #fff;
+  border-top: 1px solid #e9e9e9;
+  border-bottom: 1px solid #e9e9e9;
+  margin-top: 0.6rem;
+  height: auto;
+  position: relative;
+  padding: 0.95rem 0.45rem 0.95rem 2.15rem; }
+
+.close_btn {
+  display: block;
+  width: 1.25rem;
+  height: 1.25rem;
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 0 0 0.6rem 0.6rem;
+  background: url(../images/5949441660e349478d13881b711d6d2b.jpg) right top no-repeat;
+  background-size: 1.25rem auto; }
+
+.buyCarList {
+  height: auto;
+  overflow: hidden;
+  position: relative; }
+
+.h_box {
+  width: 100%; }
+
+.shop_img {
+  width: 3.95rem;
+  height: 3.95rem;
+  border: 1px solid #ddd;
+  position: relative;
+  margin-right: 0.35rem;
+  text-align: center; }
+
+.shop_img img {
+  display: inline-block;
+  width: auto;
+  height: 3.95rem;
+  max-width: 3.95rem; }
+
+.h_box dd {
+  width: 11.65rem;
+  height: 4.05rem; }
+
+.buyCarLeft {
+  width: 70%;
+  float: left;
+  padding-top: 0.3rem;
+  height: 2.8rem;
+  position: relative;
+  padding-bottom: 0.8rem; }
+
+.buyCarLeft h2 {
+  overflow: hidden;
+  line-height: 0.8rem;
+  max-height: 1.65rem;
+  width: 100%; }
+
+.buyCarLeft h2 em {
+  font-size: 0.8rem; }
+
+.buyCol {
+  color: #999;
+  padding-top: 0.35rem;
+  overflow: hidden; }
+
+.buyCol em {
+  font-size: 0.6rem;
+  color: #999; }
+
+.buyCarRight p {
+  color: #f15353;
+  text-align: right;
+  padding-top: 0.3rem; }
+
+.buyCarRight p em {
+  font-size: 0.7rem; }
+
+.numb {
+  margin-top: 1.7rem;
+  height: auto;
+  overflow: hidden;
+  border-radius: 0.2rem; }
+
+.numb span {
+  display: block;
+  text-align: right;
+  color: #818080; }
+
+.numb span em {
+  font-size: 0.6rem; }
+
+.addprice_box {
+  margin-top: 0.6rem;
+  width: 100%;
+  height: auto; }
+
+.addprice_title {
+  padding: 0.6rem 0rem 0.6rem 0.7rem;
+  border-bottom: 1px solid #d3d3d3;
+  background: white; }
+
+.addprice_title img {
+  width: 1.3rem;
+  height: 1.25rem;
+  display: inline-block;
+  vertical-align: middle; }
+
+.addprice_list {
+  padding: 0.9rem 0;
+  height: 12.55rem;
+  font-size: 0.7rem;
+  background: white; }
+
+#slide1 {
+  width: 100%;
+  height: 100%; }
+
+.page1 {
+  width: 7.3rem !important;
+  margin-right: 0 !important; }
+
+.mr24 {
+  margin: 0rem 0.72rem; }
+
+.mr24 img {
+  height: auto;
+  overflow: hidden;
+  display: block;
+  width: 5.85rem;
+  border: 1px solid #efefef; }
+
+.shop_titles {
+  line-height: 0.9rem;
+  height: 1.85rem;
+  padding-top: 0.4rem; }
+
+.shop_titles em {
+  font-size: 0.7rem;
+  color: #3f3f3f; }
+
+.prices {
+  padding-top: 0.3rem;
+  letter-spacing: 0.03rem; }
+
+.font20 {
+  font-size: 0.6rem;
+  color: #f45353; }
+
+.font32 {
+  font-size: 1rem;
+  color: #f45353; }
+
+.add_shop_car {
+  height: 1.4rem;
+  line-height: 1.4rem;
+  display: block;
+  border: 1px solid #c1c1c1;
+  border-radius: 0.3rem;
+  margin-top: 0.55rem;
+  color: #666;
+  text-align: center; }
+
+.add_shop_car em {
+  font-size: 0.8rem; }
+
+.buy_box {
+  background-color: #fff;
+  border-top: 1px solid #d3d3d3;
+  border-bottom: 1px solid #d3d3d3;
+  width: 100%;
+  height: 2.6rem;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  z-index: 9999999; }
+
+.buy_boxs {
+  width: 100%;
+  height: 100%; }
+
+.flex_1 {
+  padding-bottom: 0.4rem;
+  width: 71%;
+  padding-top: 0.1rem; }
+
+.rights {
+  width: 60%;
+  text-align: right; }
+
+.pr20 {
+  padding-right: 0.6rem;
+  letter-spacing: 0.03rem; }
+
+.pr20 em {
+  font-size: 0.7rem;
+  color: #717272; }
+
+.pt14 {
+  font-weight: 700;
+  color: #f45353;
+  padding-right: 0.6rem;
+  text-align: center; }
+
+.font28 {
+  font-size: 0.8rem; }
+
+.font36 {
+  font-size: 1.1rem; }
+
+.jiesuan {
+  width: 29%;
+  height: 100%; }
+
+.jiesuan span {
+  display: block;
+  width: 100%;
+  height: 100%;
+  line-height: 2.6rem;
+  text-align: center;
+  background-color: #f45353; }
+
+.jiesuan span em {
+  color: #fff;
+  font-size: 0.9rem; }
+
+.addprice_title span {
+  color: darkorange;
+  font-family: "PingHei", Microsoft Yahei, SimSun, Arial, Helvetica, sans-serif; }
+
+/*# sourceMappingURL=shaoCar.css.map */

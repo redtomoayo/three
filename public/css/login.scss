@@ -1,0 +1,243 @@
+html {
+  font-size: 100; }
+
+#wraper {
+  width: 100%;
+  font-family: "PingHei", Microsoft Yahei, SimSun, Arial, Helvetica, sans-serif; }
+
+.top {
+  background: #06C1AE;
+  width: 100%;
+  height: 0.505rem;
+  border-bottom: 1px solid #21897d;
+  color: white; }
+
+.pre {
+  width: 0.525rem;
+  font-size: 0.4rem;
+  height: 100%;
+  line-height: 0.505rem;
+  text-align: center;
+  float: left;
+  font-family: "PingHei", Microsoft Yahei, SimSun, Arial, Helvetica, sans-serif; }
+
+.meituan {
+  width: 2.8rem;
+  height: 100%;
+  float: left;
+  line-height: 0.505rem;
+  text-align: center;
+  font-weight: 400;
+  font-size: 0.2rem; }
+
+.top_right {
+  height: 100%;
+  float: left;
+  width: 0.4rem; }
+
+.top_right a {
+  text-align: left;
+  display: inline-block;
+  height: 100%;
+  color: white;
+  width: 100%;
+  font-size: 0.12rem; }
+
+.nav_btn {
+  display: block;
+  margin-top: 0.1rem; }
+
+.text-icon {
+  display: inline-block;
+  border-bottom: 1px solid white;
+  border-top: 1px solid white;
+  border-left: 1px solid white;
+  border-right: 1px solid white;
+  float: left; }
+
+.border {
+  width: 0.2rem;
+  float: left;
+  border: 1px solid white;
+  margin-left: 0.02rem; }
+
+.tupiao {
+  width: 100%;
+  height: 0.07rem; }
+
+.tu_one {
+  margin-top: 0.09rem; }
+
+.text_login {
+  width: 100%;
+  height: 0.21rem;
+  padding-top: 0.14rem;
+  padding-bottom: 0.1rem; }
+
+.zhanghao {
+  width: 45%;
+  height: 100%;
+  float: left;
+  text-align: center; }
+
+.zhanghao {
+  font-size: 0.16rem;
+  font-family: "PingHei", Microsoft Yahei, SimSun, Arial, Helvetica, sans-serif; }
+
+.cc {
+  color: #06C1AE; }
+
+.shouji {
+  font-size: 0.16rem;
+  font-family: "PingHei", Microsoft Yahei, SimSun, Arial, Helvetica, sans-serif;
+  width: 44%;
+  height: 100%;
+  float: right;
+  text-align: center; }
+
+.getiao {
+  width: 100%;
+  height: 0.04rem;
+  background: #ccc; }
+
+.left_tiao {
+  width: 50%;
+  height: 100%;
+  float: left; }
+
+.lt {
+  float: right;
+  height: 100%;
+  width: 80%;
+  background: #06C1AE; }
+
+.right_tiao {
+  width: 50%;
+  height: 100%;
+  float: right; }
+
+.rt {
+  float: left;
+  height: 100%;
+  width: 80%;
+  background: #06C1AE; }
+
+.items {
+  display: none; }
+.row {
+    margin-right: -15px;
+    margin-left: -15px;
+}
+.col-md-12 {
+    width: 100%;
+    float: left;
+    min-height: 0.01rem;
+   
+    padding-right: 0.15rem;
+    position: relative;
+}
+.tal {
+    text-align: left;
+}
+.mt20 {
+    margin-top: 0.2rem;
+}
+.form-signin {
+    max-width: 3.30rem;
+    padding: 0.15rem;
+    margin: 0 auto;
+}
+input {
+    border: 1px solid #CCCCCC;
+}
+.form-signin .form-control {
+    position: relative;
+    height: auto;
+    
+    box-sizing: border-box;
+    padding: 0.1rem;
+    font-size: 0.16rem;
+}
+.form-control {
+    display: block;
+    width: 100%;
+/*
+    height: 34px;
+    padding: 6px 12px;
+    font-size: 14px;
+*/
+    line-height: 1.42857143;
+    color: #555;
+    background-color: #fff;
+    background-image: none;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+   
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075);
+    
+ 
+    transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+}
+.form-signin .checkbox {
+    margin-bottom: 0.10rem;
+    font-weight: normal;
+    padding: 0 20px;
+}
+.clear {
+    clear: both;
+}
+.p0 {
+    padding: 0px;
+}
+
+.col-xs-6 {
+    width: 50%;
+}
+.btn-block {
+    display: block;
+    width: 100%;
+}
+.btn-info {
+    color: #fff;
+    background-color: #5bc0de;
+    border-color: #46b8da;
+}
+.btn {
+
+    padding: 0.06rem 0.12rem;
+    margin-bottom: 0;
+    font-size: 0.14rem;
+    font-weight: normal;
+    line-height: 1.42857143;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    cursor: pointer;
+    -webkit-user-select: none;
+   
+    user-select: none;
+    background-image: none;
+    border: 1px solid transparent;
+    border-radius: 0.04rem;
+}
+.col-xs-5 {
+    width: 41.66666667%;
+}
+.col-xs-6,.col-xs-5{
+    float: left;
+}
+.btn-default {
+    color: #333;
+    background-color: #fff;
+    border-color: #ccc;
+}
+
+
+
+/*# sourceMappingURL=login.css.map */
+
+
+
+
+
+

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <title>Document</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/login.css">
+
+     <script src="js/response_login.js"></script>
+</head>
+<body>
+  <div id='#wraper'>
+      <div class='top'>
+          <div class='pre'><a href="/index" style='color:white'>＜</a></div>
+          <span class='meituan'>会员中心</span>
+          <div class='top_right'>    
+            <a >
+              <span class="nav-btn">
+                           <div class='tupiao tu_one'>
+                               <span class="text-icon"></span>
+                            <span class="border"></span>
+                           </div>
+                             <div class='tupiao'>
+                               <span class="text-icon"></span>
+                            <span class="border"></span>
+                           </div>
+                              <div class='tupiao'>
+                               <span class="text-icon"></span>
+                            <span class="border"></span>
+                           </div>
+                            
+                  导航
+                </span>
+          </a>
+          </div>
+      </div>
+<!--    手机或者账号登录  -->
+     <div class='text_login'>
+         <div class='zhanghao item'>会员登录</div>
+         <div class=' shouji item'>手机验证登录</div>
+     </div>
+     <div class='getiao'>
+         <div class='left_tiao items'>
+             <div class='lt'></div>
+         </div>
+         <div class='right_tiao items'>
+             <div class='rt'></div>
+         </div>
+     </div>
+      
+      <div class="row">
+        <div class="col-md-12 tal mt20">
+            <form id="theForm" name="theForm" class="form-signin" action="/d_login" method="post">
+            <input type="hidden" id="returnUrl" name="returnUrl" value="">
+              
+              <input name="uname" id="username" type="text" style="margin-bottom: -2px;-webkit-appearance:none; " class="form-control" placeholder="帐户名/手机号码" message="账号" required="true" autofocus="" tabindex="1">
+              <br>
+              <input id="pwd" name="upass" type="password" class="form-control" placeholder="请输入密码" message="密码" required="true" style="-webkit-appearance:none;" autocomplete="off" tabindex="2">
+	          <label class="checkbox">
+	                     <input id="_spring_security_remember_me" name="_spring_security_remember_me" type="checkbox" tabindex="4"> 记住我
+	                	 <a href="/forget" style="float:right">忘记密码</a> 
+	              </label>
+                <div class="clear"></div>
+                <div class="col-xs-6 p0"><button  class="btn btn-info btn-block" >登  陆</button></div>
+                <div class="col-xs-5 p0" style="margin-left:10px;"><button  class="btn btn-default btn-block"><a href="/z">注 册</a></button></div>
+            </form>
+        </div>
+     </div>
+      
+      
+      
+      
+      
+  </div>
+  
+  
+  
+  
+  
+  
+    
+      
+      <script src='js/jquery-1.11.1.min.js'></script>
+    <script src="./js/swiper.min.js"></script> 
+    <script src='js/login.js'></script> 
+</body>
+</html>
